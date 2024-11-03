@@ -8,29 +8,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}My Django Site{% endblock %}</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        .bg-blue-dark {
+            background-color: #0E3194;
+        }
+        .bg-blue-light {
+            background-color: #01A7C2;
+        }
+        .bg-orange {
+            background-color: #E16036;
+        }
+        .bg-yellow {
+            background-color: #FAC504;
+        }
+        .bg-white {
+            background-color: #FFFFFF;
+        }
 
+        .text-blue-dark {
+            color: #0E3194;
+        }
+        .text-blue-light {
+            color: #01A7C2;
+        }
+        .text-orange {
+            color: #E16036;
+        }
+        .text-yellow {
+            color: #FAC504;
+        }
+        .text-white {
+            color: #FFFFFF;
+        }
+    </style> 
     {% comment %} <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> {% endcomment %}
 </head>
-<body class="bg-gray-100">
+<body class="">
     <!-- Navbar -->
-    <nav class="bg-blue-600 text-white text-2xl py-4 relative z-10 overflow-visible">
+    <nav class="bg-blue-dark text-white text-2xl py-4 relative z-10 overflow-visible">
         <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
             <div class="relative -mb-24">
                 <a href="{% url 'home' %}">
                 <img src="{% static "images/logo.webp" %}" alt="Logo" class="h-25 w-25 transform translate-y-0">
                 </a>
             </div>
-            <div>
+            <div class="flex items-center space-x-5">
                 <a href="{% url 'home' %}" class="mx-2 hover:text-gray-300">Home</a>
                 <a href="{% url "about" %}" class="mx-2 hover:text-gray-300">About</a>
                 <a href="{% url "contact" %}" class="mx-2 hover:text-gray-300">Contact</a>
+                <a href="https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E331406&id=1" target="_blank" class="mx-2 hover:text-gray-300">Donate</a>
+
+                <div class="">
+                    <a href="{% url 'home' %}">
+                    <img src="{% static "icons/search.png" %}" alt="Search" class="h-8 w-8">
+                    </a>
+                </div>
+                <div class="">
+                    <a href="{% url 'home' %}">
+                    <img src="{% static "icons/user.png" %}" alt="Account" class="h-8 w-8">
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Page Content -->
-    <div class="container mx-auto py-8">
+    <div class="">
         {% block content %}{% endblock %}
     </div>
+
+    <footer class="bg-blue-dark text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+          
+          <!-- Logo and Social Links Section -->
+          <div>
+            <img src="{% static 'images/logo.webp' %}" alt="Community Bike Works Logo" class="mx-auto md:mx-0 mb-4 w-14 h-14">
+            <p class="text-lg font-semibold mb-2">Community Bike Works</p>
+            <div class="flex justify-center md:justify-start space-x-4">
+              <a href="#"><img src="{% static 'icons/facebook.png' %}" alt="Facebook" class="w-6 h-6"></a>
+              <a href="#"><img src="{% static 'icons/twitter.png' %}" alt="Twitter" class="w-6 h-6"></a>
+              <a href="#"><img src="{% static 'icons/instagram.png' %}" alt="Instagram" class="w-6 h-6"></a>
+              <a href="#"><img src="{% static 'icons/linkedin.png' %}" alt="LinkedIn" class="w-6 h-6"></a>
+            </div>
+          </div>
+      
+          <!-- Programs Section -->
+          <div>
+            <h3 class="text-lg font-semibold mb-2">Programs</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>Earn a Bike</li>
+              <li>Junior Earn a Bike</li>
+              <li>Bike Summit</li>
+            </ul>
+          </div>
+      
+          <!-- Contact Section -->
+          <div>
+            <h3 class="text-lg font-semibold mb-2">Contact</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>(610) - 820 - 9927</li>
+              <li>(610) - 434 - 1140</li>
+              <li>(484) - 957 - 6722</li>
+            </ul>
+          </div>
+      
+          <!-- Locations Section -->
+          <div>
+            <h3 class="text-lg font-semibold mb-2">Locations</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>East Allentown</li>
+              <li>Downtown Allentown</li>
+              <li>Easton</li>
+            </ul>
+          </div>
+      
+        </div>
+    </footer>
+      
 </body>
 </html>
