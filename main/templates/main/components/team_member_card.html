@@ -1,0 +1,20 @@
+<!-- main/components/team_member_card.html -->
+{% load static %}
+
+<div class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col">
+    {% if member.image %}
+      <img src="{% static member.image %}" alt="{{ member.name }}" class="w-full h-48 object-cover">
+    {% else %}
+      <!-- Placeholder image if no image is provided -->
+      <img src="https://via.placeholder.com/150" alt="{{ member.name }}" class="w-full h-48 object-cover">
+    {% endif %}
+    <div class="p-6">
+      <h2 class="text-lg font-semibold">{{ member.name }}</h2>
+      <p class="text-gray-500">{{ member.role }}</p>
+      <p class="mt-2 text-gray-600">{{ member.description }}</p>
+      {% if member.has_more_info %}
+        <button class="mt-4 text-blue-500">+</button>
+      {% endif %}
+    </div>
+</div>
+  

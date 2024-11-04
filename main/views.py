@@ -30,8 +30,27 @@ def shop(request, shopname):
     template = shop_templates.get(shopname)
     if template is None:
         raise Http404("Shop not found")
+    
 
-    return render(request, template)
+    team_members = [
+        {
+            'name': 'Kim Schaffer',
+            'role': 'Executive Director',
+            'description': 'Kim became Director of Community Bike Works in 2013. Under her leadership, the organization has grown...',
+            'image': 'images/team/kim-schaffer.png',  # Replace with ImageField URL if using Django's media files
+            'has_more_info': True,
+        },
+        {
+            'name': 'Madeline M',
+            'role': 'Office Manager & Jr. EAB Coordinator',
+            'description': 'Madeline has a dual role at Bike Works: Her mornings are spent managing...',
+            'image': 'images/team/madeline-m.png',
+            'has_more_info': True,
+        },
+        # Add more team members here...
+    ]
+
+    return render(request, template, {'team_members': team_members})
 
 
 def mission(request):
