@@ -36,17 +36,25 @@ def shop(request, shopname):
         {
             'name': 'Kim Schaffer',
             'role': 'Executive Director',
-            'description': 'Kim became Director of Community Bike Works in 2013. Under her leadership, the organization has grown...',
-            'image': 'images/team/kim-schaffer.png',  # Replace with ImageField URL if using Django's media files
+            'description': 'Kim became Director of Community Bike Works in 2013. Under her leadership, the organization has grown to engage more students in a range of cycling, literacy, and leadership programs. ',
+            'image': 'images/team/franklin-park/kim-schaffer.png',  # Replace with ImageField URL if using Django's media files
             'has_more_info': True,
         },
         {
             'name': 'Madeline M',
             'role': 'Office Manager & Jr. EAB Coordinator',
-            'description': 'Madeline has a dual role at Bike Works: Her mornings are spent managing...',
-            'image': 'images/team/madeline-m.png',
+            'description': 'Madeline has a dual role at Bike Works: Her mornings are spent managing our database and coordinating other office tasks, and afternoons she runs our Junior Earn a Bike program. ',
+            'image': 'images/team/franklin-park/madeline-m.png',
             'has_more_info': True,
         },
+        {
+            'name': 'Adonis Cannon',
+            'role': 'Downtown Allentown Program Manager & Cycling Coordinator',
+            'description': 'Adonis manages Earn a Bike and Drop-in at our downtown bike shop, and our recreational, road riding, track cycling, and mountain biking programs for all our students. ',
+            'image': 'images/team/franklin-park/adonis-cannon.png',
+            'has_more_info': True,
+        },
+
         # Add more team members here...
     ]
 
