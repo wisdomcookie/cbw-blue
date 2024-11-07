@@ -1,11 +1,94 @@
-<!-- main/contact.html -->
+<!-- main/hiring.html -->
 {% extends 'main/base.html' %}
+{% load static %}
 
-{% block title %}Contact Us{% endblock %}
+{% block title %}Hiring{% endblock %}
 
 {% block content %}
-<div class="text-center">
-    <h1 class="text-3xl font-bold text-blue-600">Contact Us</h1>
-    <p class="mt-4 text-gray-600">This page contains contact information.</p>
+
+<!-- Header Image Section -->
+<div class="w-full mb-8">
+    <img src="{% static 'images/hiring_header.png' %}" alt="Team photo" class="w-full h-auto object-cover">
 </div>
+
+<!-- Join Our Team Section -->
+<div class="flex items-center justify-center mb-4">
+    <img src="{% static 'icons/bike.png' %}" alt="Bike photo" class="w-12 h-12 mr-4">
+    <h2 class="text-3xl text-blue-dark font-bold text-center">Join Our Team!</h2>
+    <img src="{% static 'icons/bike.png' %}" alt="Bike photo" class="w-12 h-12 ml-4">
+</div>
+
+<p class="text-center text-blue-dark max-w-5xl mx-auto">
+    Community Bike Works is looking for enthusiastic and dedicated individuals to join our team. If you are passionate about working with youth and making a difference in the community, we want to hear from you!
+</p>
+
+    <!-- Job Description -->
+    <div class="bg-blue-dark text-white p-8 mt-10 mx-4 rounded-lg relative max-w-5xl mx-auto shadow-lg">
+        <h3 class="text-2xl font-semibold text-center mb-4">Job Description:</h3>
+        <ul class="list-disc space-y-2 pl-5">
+            <li>Teach classes at our Allentown and Easton bike shops, and in Allentown, Bethlehem, and Easton schools.</li>
+            <li>Lead our afterschool and summer Drop-In program by coordinating fun and education activities.</li>
+            <li>Build meaningful relationships with students that offer them mentorship and support.</li>
+            <li>Maintain student records and complete other administrative tasks needed to run programs.</li>
+            <li>Assist with bike repairs, bike donations, and in the upkeep of the Community Bike Works bike shop.</li>
+            <li>Participate in recreational bike rides on local trails.</li>
+            <li>Represent Community Bike Works in the community.</li>
+        </ul>
+    </div>
+    
+    <!-- Qualifications Section -->
+    <div class="bg-blue-light text-white p-8 mt-10 mx-4 rounded-lg relative max-w-5xl mx-auto shadow-lg">
+        <h3 class="text-2xl font-semibold text-center mb-4">Qualifications:</h3>
+        <ul class="list-disc space-y-2 pl-5">
+            <li>Self-motivated, willing to learn, and able to work both independently and as part of a team.</li>
+            <li>Commitment to the values of Community Bike Works and inclusivity in interactions with students, partners, and staff.</li>
+            <li>Complete state and federal child abuse clearance checks.</li>
+            <li>Driver’s license with a clean driving record (or willingness to obtain one).</li>
+            <li>Comfortable riding a bike; training will be provided if needed.</li>
+            <li>Fluency in Spanish is beneficial but not required.</li>
+        </ul>
+    </div>
+
+    <!-- Hours & Salary Section -->
+    <div class="bg-orange text-white p-8 mt-10 mx-4 rounded-lg relative max-w-5xl mx-auto shadow-lg">
+        <h3 class="text-2xl font-semibold text-center mb-4">Hours & Salary:</h3>
+        <ul class="list-disc space-y-2 pl-5">
+            <li>Full-time positions available Monday through Friday, 10 am - 6 pm, with occasional Saturdays as required.</li>
+            <li>Hourly rate: $25.00/hr, with benefits including paid time off, health insurance, and other perks for full-time employees.</li>
+            <li>Part-time positions also available. Rate: $18/hr with similar benefits, including paid time off.</li>
+        </ul>
+    </div>
+
+
+<!-- Interested in Joining Section -->
+<div class="bg-blue-dark text-blue-dark p-8 mt-10 mx-auto max-w-5xl shadow-lg rounded-lg mb-10">
+    <h2 class="text-3xl font-bold text-center text-white mb-4">Interested in Joining the Team?</h2>
+    <p class="text-center text-white mb-6">Apply below and join us in making a difference!</p>
+
+    <!-- Application Form -->
+    <div class="bg-white text-gray-900 p-6 rounded-lg shadow-lg max-w-lg mx-auto">
+        <form action="#" method="post" class="space-y-4">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Full Name" class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+            <input type="email" name="email" placeholder="Email Address" class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+            <input type="text" name="phone" placeholder="Phone Number" class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+            
+            <div>
+                <select name="availability" class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                    <option value="" disabled selected>Availability</option>
+                    <option value="Full-Time">Full-Time</option>
+                    <option value="Part-Time">Part-Time</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="text-gray-700 text-sm font-semibold">Attach Resume</label>
+                <input type="file" name="resume" class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+            </div>
+            
+            <button type="submit" class="w-full bg-yellow text-blue-dark font-bold py-3 px-6 rounded-lg hover:bg-yellow-500 transition-all">Submit Application</button>
+        </form>
+    </div>
+</div>
+
 {% endblock %}
