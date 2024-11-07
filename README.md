@@ -1,9 +1,7 @@
 # cbw-blue
 Community Bike Works (Lehigh Valley) Website Redesign
 
-# example push
-
-Setup
+# Setup
 
 Assuming Python is installed
 
