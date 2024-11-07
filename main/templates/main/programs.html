@@ -1,3 +1,160 @@
 <!-- main/programs.html -->
 
 {% extends "main/base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+
+<div class="w-full">
+    <img src={% static "images/programs-banner.png" %} alt="Full Width Image" class="w-full h-auto">
+</div>
+
+<div class="w-3/5 mx-auto bg-white">
+
+    <h1 class="text-4xl font-bold text-center text-blue-dark pt-20">Program Process</h1>
+
+
+    <div class="grid grid-cols-12 gap-y-8 pt-10">
+        <!-- Step 1 -->
+        <div class="col-span-1"></div>
+
+        <div class="col-span-3 flex justify-center">
+          <div class="w-12 h-12 bg-blue-800 text-white flex items-center justify-center rounded-full">
+            <!-- Icon (replace with appropriate icon) -->
+            <img src={% static "icons/rocket-ship.png" %} alt="Icon" class="w-8 h-8">
+          </div>
+        </div>
+        <div class="col-span-8 flex items-center ">
+          <h3 class="text-xl font-bold text-blue-800">Find a program</h3>
+          {% comment %} <p class="text-gray-600">Find a program that interests you. The details and the list of programs can be found below.</p> {% endcomment %}
+        </div>
+
+        <div class="col-span-1"></div>
+
+        <div class="col-span-3 flex justify-center">
+            <img src={% static "icons/gear-blue-with-line.png" %} alt="Icon" class="w-6 h-10">
+        </div>
+        <div class="col-span-8 flex items-center ">
+            {% comment %} <h3 class="text-xl font-bold text-blue-800">Find a program</h3> {% endcomment %}
+            <p class="text-gray-600">Find a program that interests you. The details and the list of programs can be found below.</p>
+        </div>
+      
+        <!-- Step 2 -->
+        <div class="col-span-1"></div>
+
+        <div class="col-span-3 flex justify-center">
+          <div class="w-12 h-12 bg-blue-800 text-white flex items-center justify-center rounded-full">
+            <!-- Icon (replace with appropriate icon) -->
+            <img src={% static "icons/lightbulb.png" %} alt="Icon" class="w-8 h-8">
+          </div>
+        </div>
+        <div class="col-span-8 flex items-center ">
+          <h3 class="text-xl font-bold text-blue-800">Fill Out Information</h3>
+          {% comment %} <p class="text-gray-600">Fill out the form with your information. Please fill out all the required fields.</p> {% endcomment %}
+        </div>
+
+        <div class="col-span-1"></div>
+
+        <div class="col-span-3 flex justify-center">
+            <img src={% static "icons/gear-blue-with-line.png" %} alt="Icon" class="w-6 h-10">
+        </div>
+        <div class="col-span-8 flex items-center">
+            {% comment %} <h3 class="text-xl font-bold text-blue-800">Find a program</h3> {% endcomment %}
+            <p class="text-gray-600">Fill out the form with your information. Please fill out all the required fields.</p>
+        </div>
+      
+        <!-- Step 3 -->
+        <div class="col-span-1"></div>
+        
+        <div class="col-span-3 flex justify-center">
+          <div class="w-12 h-12 bg-blue-800 text-white flex items-center justify-center rounded-full">
+            <!-- Icon (replace with appropriate icon) -->
+            <img src={% static "icons/checkmark.png" %} alt="Icon" class="w-8 h-8">
+          </div>
+        </div>
+        <div class="col-span-8 flex items-center ">
+          <h3 class="text-xl font-bold text-blue-800">Sign-Up</h3>
+          {% comment %} <p class="text-gray-600">Hit "sign-up" and you are all set! You will receive additional details via email.</p> {% endcomment %}
+        </div>
+
+        <div class="col-span-1"></div>
+
+        <div class="col-span-3 flex justify-center">
+            {% comment %} <img src={% static "icons/gear-blue-with-line.png" %} alt="Icon" class="w-8 h-8"> {% endcomment %}
+        </div>
+        <div class="col-span-8 flex items-center ">
+            {% comment %} <h3 class="text-xl font-bold text-blue-800">Find a program</h3> {% endcomment %}
+            <p class="text-gray-600">Hit "sign-up" and you are all set! You will receive additional details via email.</p>
+        </div>
+
+    </div>
+
+      
+    <div class="text-white text-center pt-20 w-2/3 mx-auto">
+        <div class="bg-orange p-6 rounded shadow">
+            <h3 class="text-2xl font-bold mb-4 text-blue-dark">Earn A Bike Program</h3>
+            <p class="mb-6">Earn a Bike connects youth ages 9-18 with mentors to learn lessons in bike mechanics and safety. While learning tool use, bike repair, and safe riding, students also practice life skills including communication, teamwork, and perseverance. When students complete the program, they earn their refurbished bike and a new helmet!</p>
+        <button class="bg-yellow-500 text-black font-semibold px-4 py-2 mt-6 w-1/4 rounded">Register</button>
+        </div>
+    </div>
+
+          
+    <div class="text-white text-center pt-20 w-2/3 mx-auto">
+        <div class="bg-orange p-6 rounded shadow">
+            <h3 class="text-2xl font-bold mb-4 text-blue-dark">Junior Earn a Bike Program</h3>
+            <p class="mb-6">In Junior Earn a Bike, second- and third-graders practice social-emotional learning while learning about reading, riding, and wrenching. Junior Earn a Bike students learn that, just as building a bike requires tools and parts, building a healthy emotional life requires social and emotional tools they can learn to use. At the end of the program, students earn their bike, a new helmet, and several books!</p>
+        <button class="bg-yellow-500 text-black font-semibold px-4 py-2 mt-6 w-1/4 rounded">Register</button>
+        </div>
+    </div>
+
+    <h1 class="text-4xl font-bold text-center text-blue-dark pt-20">Frequently Asked Questions</h1>
+
+    <div class="w-1/2 mx-auto mt-8 space-y-4 pb-20">
+        <!-- FAQ Item 1 -->
+        <div class="border-b border-gray-300">
+          <button onclick="toggleAnswer(1)" class="flex justify-between items-center w-full py-4 text-blue-800 font-semibold">
+            What is a program?
+            <span class="text-orange">&#x25BC;</span> <!-- Down arrow -->
+          </button>
+          <div id="answer-1" class="hidden text-gray-600 pb-4">
+            A program is a series of structured activities designed to help you learn specific skills or knowledge.
+          </div>
+        </div>
+      
+        <!-- FAQ Item 2 -->
+        <div class="border-b border-gray-300">
+          <button onclick="toggleAnswer(2)" class="flex justify-between items-center w-full py-4 text-blue-800 font-semibold">
+            How do you register for a program?
+            <span class="text-orange">&#x25BC;</span> <!-- Down arrow -->
+          </button>
+          <div id="answer-2" class="hidden text-gray-600 pb-4">
+            You can register by filling out our registration forms or contacting the respective shop representatives.
+          </div>
+        </div>
+      
+        <!-- FAQ Item 3 -->
+        <div class="border-b border-gray-300">
+          <button onclick="toggleAnswer(3)" class="flex justify-between items-center w-full py-4 text-blue-800 font-semibold">
+            When can I keep my bike?
+            <span class="text-orange">&#x25BC;</span> <!-- Down arrow -->
+          </button>
+          <div id="answer-3" class="hidden text-gray-600 pb-4">
+            You can keep your bike after your completion of the Earn a Bike program.
+          </div>
+        </div>
+    </div>
+      
+    <script>
+    function toggleAnswer(id) {
+        const answer = document.getElementById(`answer-${id}`);
+        answer.classList.toggle("hidden");
+    }
+    </script>
+
+
+
+</div>
+  
+{% endblock content %}

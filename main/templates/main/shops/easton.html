@@ -3,9 +3,25 @@
 {% extends 'main/shops/base-shop.html' %}
 {% load static %}
 
-{% block content %}
-<div class="text-center">
-    <h1 class="text-3xl font-bold text-blue-600">Easton</h1>
-    <p class="mt-4 text-gray-600">This page contains shop information.</p>
-</div>
-{% endblock %}
+
+
+{% block park_name %}Easton{% endblock %}
+{% block park_image %}{% static "images/shops/easton.png" %}{% endblock park_image %}
+
+{% block program_contact %}Nella Panella{% endblock program_contact %}
+{% block program_contact_number %}(484) 957-6722{% endblock program_contact_number %}
+
+{% block map_source %}
+"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15362.51705543737!2d-75.2247061!3d40.690841!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c46de5fc0b8809%3A0x9a77b2819c8a5634!2sCommunity%20Bike%20Works!5e1!3m2!1sen!2sus!4v1730941369075!5m2!1sen!2sus" 
+{% endblock map_source %}
+
+{% block addressline1 %}1101 Northampton St{% endblock addressline1 %}
+{% block addressline2 %}Easton, PA 18042{% endblock addressline2 %}
+
+{% block shop_location %}Easton{% endblock shop_location %}
+
+
+{% block facebook_link %}"#"{% endblock %}
+{% block twitter_link %}"#"{% endblock %}
+{% block instagram_link %}"#"{% endblock %}
+{% block linkedin_link %}"#"{% endblock %}
