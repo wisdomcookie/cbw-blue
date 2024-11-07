@@ -61,8 +61,8 @@ def shop(request, shopname):
     return render(request, template, {'team_members': team_members})
 
 
-def mission(request):
-    return render(request, 'main/about/mission.html')
+def impact(request):
+    return render(request, 'main/about/impact.html')
 
 def people(request):
     return render(request, 'main/about/people.html')

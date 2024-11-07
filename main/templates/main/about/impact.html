@@ -1,0 +1,59 @@
+<!-- main/impact.html -->
+
+{% extends "main/base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+
+
+
+<div class="w-full">
+    <img src={% static "images/impact-banner.png" %} alt="Full Width Image" class="w-full h-auto">
+</div>
+
+<div class="w-full grid grid-cols-10">
+
+    <img src={% static "images/impact-7.png" %} alt="Full Width Image" class="w-full h-auto col-span-3">
+    <img src={% static "images/impact-6.png" %} alt="Full Width Image" class="w-full h-auto col-span-4">
+    <img src={% static "images/impact-8.png" %} alt="Full Width Image" class="w-full h-auto col-span-3">
+
+</div>
+
+<div class="w-3/5 mx-auto bg-white">
+
+    <h1 class="text-4xl font-bold text-center text-blue-dark pt-20">About Us</h1>
+
+    <div class="text-white text-center pt-10 w-2/3 mx-auto">
+        <div class="bg-orange p-20 rounded shadow">
+            <p class="mb-6 text-2xl">
+                In Earn a Bike, students are paired with mentors for 24 hours of lessons in bike mechanics and safety.
+                <br><br>
+                While working on their bikes, students learn teamwork, perseverance and other life skills. They see the satisfaction of turning a broken bike into a functional one, and earn their refurbished bike and new helmet! </p>
+        </div>
+    </div>
+
+    <h1 class="text-4xl font-bold text-center text-blue-dark pt-20">Our Impact</h1>
+
+    <div class="w-full grid grid-cols-3 pt-10">
+
+        <img src={% static "images/impact-9.png" %} alt="Full Width Image" class="w-full h-auto col-span-1">
+        <img src={% static "images/impact-10.png" %} alt="Full Width Image" class="w-full h-auto col-span-1">
+        <img src={% static "images/impact-11.png" %} alt="Full Width Image" class="w-full h-auto col-span-1">
+    
+    </div>
+
+    <div class="text-white text-center py-10 w-2/3 mx-auto">
+        <div class="bg-blue-dark p-20 rounded shadow">
+            <p class="mb-6 text-2xl">
+                Bike mentoring makes students feel more engaged at school, which can have an impact on academic success.
+                <br><br>
+                Of students at a United Way community school who completed  Earn a Bike or JrEAB, 72% improved or maintained their school attendance that year!</p>
+        </div>
+    </div>
+
+
+
+
+{% endblock content %}
