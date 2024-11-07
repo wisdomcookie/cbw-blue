@@ -3,7 +3,7 @@ Community Bike Works (Lehigh Valley) Website Redesign
 
 # Setup
 
-Assuming Python is installed
+Assuming that Python is installed
 
 Navigate to top level of repo,
 
