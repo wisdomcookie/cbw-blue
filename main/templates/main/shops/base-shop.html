@@ -16,36 +16,41 @@
 </div>
 
 <div class="w-3/5 mx-auto bg-white">
-    <h1 class="text-4xl font-bold text-center text-blue-dark pt-20">Contact Information</h1>
+
+  <div class="flex items-center justify-center pt-20 pb-5">
+    <img src="{% static 'icons/bike.png' %}" alt="Bike icon" class="w-12 h-12 mr-4">
+    <h1 class="text-4xl font-bold text-center text-blue-dark">Contact Information</h1>
+    <img src="{% static 'icons/bike.png' %}" alt="Bike icon" class="w-12 h-12 ml-4">
+  </div>
     
-    <div class="max-w-6xl mx-auto bg-white rounded-lg p-6 flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8 pt-10">
+    <div class="max-w-6xl mx-auto bg-red rounded-lg p-6 flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8 pt-10">
     
         <!-- Left Column: Contact Information -->
         <div class="md:w-1/3 space-y-4">
           <!-- Programs/Donate Section -->
           <div>
-            <p class="text-lg text-gray-700 font-semibold">Programs/Donate:</p>
-            <p class="text-lg text-gray-600">{% block program_contact %}Adonis Cannon{% endblock %}  <a href="tel:+16104341140" class="text-blue-500">
+            <p class="text-lg text-white font-semibold">Programs/Donate:</p>
+            <p class="text-lg text-white">{% block program_contact %}Adonis Cannon{% endblock %}  <a href="tel:+16104341140" class="text-white">
                 {% block program_contact_number %}(610) 434-1140{% endblock %} </a>
             </p>
           </div>
     
           <!-- Media Requests Section -->
           <div>
-            <p class="text-lg text-gray-700 font-semibold">Media requests:</p>
-            <p class="text-lg text-gray-600">Kim Schaffer <a href="tel:+14849573315" class="text-blue-500">(484) 957-3315</a></p>
+            <p class="text-lg text-white font-semibold">Media requests:</p>
+            <p class="text-lg text-white">Kim Schaffer <a href="tel:+14849573315" class="text-white">(484) 957-3315</a></p>
           </div>
     
           <!-- Volunteer Section -->
           <div>
-            <p class="text-lg text-gray-700 font-semibold">Volunteer:</p>
-            <p class="text-lg text-gray-600">James Williams <a href="tel:+16104341140" class="text-blue-500">(610) 434-1140</a></p>
+            <p class="text-lg text-white font-semibold">Volunteer:</p>
+            <p class="text-lg text-white">James Williams <a href="tel:+16104341140" class="text-white">(610) 434-1140</a></p>
           </div>
     
           <!-- Donation Hours Section -->
           <div>
-            <p class="text-lg text-gray-700 font-semibold">Donation Hours:</p>
-            <p class="text-lg text-gray-600">Monday - Friday<br>11 a.m. to 3 p.m.</p>
+            <p class="text-lg text-white font-semibold">Donation Hours:</p>
+            <p class="text-lg text-white">Monday - Friday<br>11 a.m. to 3 p.m.</p>
           </div>
         </div>
     
@@ -71,15 +76,18 @@
     
           <!-- Address Section -->
             <div class="text-center">
-                <p class="text-gray-700 font-semibold">{% block addressline1 %}[Address Line 1]{% endblock addressline1 %}</p>
-                <p class="text-gray-600">{% block addressline2 %}[Address Line 2]{% endblock addressline2 %}</p>
+                <p class="text-white font-semibold">{% block addressline1 %}[Address Line 1]{% endblock addressline1 %}</p>
+                <p class="text-white">{% block addressline2 %}[Address Line 2]{% endblock addressline2 %}</p>
             </div>
           </div>
         </div>
     </div>
 
-    <h1 class="text-4xl font-bold text-center text-blue-dark pt-20">Staff At {% block shop_location %}[Shop Location]{% endblock shop_location %}</h1>
-    
+    <div class="flex items-center justify-center pt-20 pb-5">
+      <img src="{% static 'icons/bike.png' %}" alt="Bike icon" class="w-12 h-12 mr-4">
+      <h1 class="text-4xl font-bold text-center text-blue-dark">Staff At {% block shop_location %}[Shop Location]{% endblock shop_location %}</h1>
+      <img src="{% static 'icons/bike.png' %}" alt="Bike icon" class="w-12 h-12 ml-4">
+    </div>    
 
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-10">
         {% for member in team_members %}
@@ -87,7 +95,11 @@
         {% endfor %}
     </div>
 
-    <h1 class="text-4xl font-bold text-center text-blue-dark pt-20">Participate in a Program</h1>
+    <div class="flex items-center justify-center pt-20 pb-5">
+      <img src="{% static 'icons/bike.png' %}" alt="Bike icon" class="w-12 h-12 mr-4">
+      <h1 class="text-4xl font-bold text-center text-blue-dark">Participate in a Program</h1>
+      <img src="{% static 'icons/bike.png' %}" alt="Bike icon" class="w-12 h-12 ml-4">
+    </div>  
 
     <div class="pt-10 grid gap-20 md:grid-cols-3 px-20">
 
