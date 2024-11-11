@@ -1,7 +1,6 @@
 from django.http import Http404, HttpResponse
 from django.shortcuts import render
 
-# Create your views here.
 def index(request):
     return HttpResponse( "Hello, world. You're at the polls index.")
     
@@ -26,7 +25,6 @@ def shop(request, shopname):
         'easton': 'main/shops/easton.html',
     }
 
-    # Get the template for the given shopname, or raise a 404 if not found
     template = shop_templates.get(shopname)
     if template is None:
         raise Http404("Shop not found")
@@ -37,7 +35,7 @@ def shop(request, shopname):
             'name': 'Kim Schaffer',
             'role': 'Executive Director',
             'description': 'Kim became Director of Community Bike Works in 2013. Under her leadership, the organization has grown to engage more students in a range of cycling, literacy, and leadership programs. ',
-            'image': 'images/team/franklin-park/kim-schaffer.png',  # Replace with ImageField URL if using Django's media files
+            'image': 'images/team/franklin-park/kim-schaffer.png',  
             'has_more_info': True,
         },
         {
@@ -54,8 +52,6 @@ def shop(request, shopname):
             'image': 'images/team/franklin-park/adonis-cannon.png',
             'has_more_info': True,
         },
-
-        # Add more team members here...
     ]
 
     return render(request, template, {'team_members': team_members})

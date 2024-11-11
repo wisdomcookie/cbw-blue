@@ -49,11 +49,11 @@
 </head>
 <body class="bg-gray-000">
 
-    <nav class="bg-blue-dark text-white text-2xl py-4 relative z-10 overflow-visible">
+    <nav class="bg-blue-dark text-white text-2xl py-4 z-10 overflow-visible fixed top-0 w-full">
         <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
             <div class="relative -mb-24">
                 <a href="{% url 'home' %}">
-                <img src="{% static "images/logo.webp" %}" alt="Logo" class="h-25 w-25 transform translate-y-0">
+                <img src="{% static "images/logo.webp" %}" alt="Logo" class="h-25 w-25 transform translate-y-0 drop-shadow-2xl">
                 </a>
             </div>
             <div class="flex items-center space-x-5">
@@ -110,7 +110,7 @@
     </nav>
 
     
-    <div class="mx-auto">
+    <div class="mx-auto mt-20 pt-10">
         {% block content %}{% endblock %}
     </div>
 
