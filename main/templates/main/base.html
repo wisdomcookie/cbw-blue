@@ -48,7 +48,7 @@
     {% comment %} <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> {% endcomment %}
 </head>
 <body class="bg-gray-000">
-    <!-- Navbar -->
+
     <nav class="bg-blue-dark text-white text-2xl py-4 relative z-10 overflow-visible">
         <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
             <div class="relative -mb-24">
@@ -68,7 +68,6 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </a>
-                    <!-- Dropdown Menu -->
                     <div class="absolute left-0 hidden bg-blue-dark text-white text-lg rounded-md shadow-lg py-2 group-hover:block">
                         <a href="{% url 'shops' shopname='allentown-central' %}" class="block px-4 py-2 hover:bg-cyan-500">Downtown Allentown</a>
                         <a href="{% url 'shops' shopname='allentown-east' %}" class="block px-4 py-2 hover:bg-cyan-500">East Allentown</a>
@@ -87,10 +86,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </a>
-                    <!-- Dropdown Menu -->
                     <div class="absolute left-0 hidden bg-blue-dark text-white text-lg rounded-md shadow-lg py-2 group-hover:block">
                         <a href="{% url 'impact' %}" class="block px-4 py-2 hover:bg-cyan-500">Mission And Impact</a>
-                        <a href="{% url 'people' %}" class="block px-4 py-2 hover:bg-cyan-500">Our Team</a>
                         <a href="{% url 'hiring' %}" class="block px-4 py-2 hover:bg-cyan-500">Hiring</a>
                     </div>
                 </div>
@@ -113,7 +110,6 @@
     </nav>
 
     
-    <!-- Page Content -->
     <div class="mx-auto">
         {% block content %}{% endblock %}
     </div>
@@ -122,7 +118,6 @@
     <footer class="bg-blue-dark text-white py-8">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
           
-          <!-- Logo and Social Links Section -->
           <div>
             <img src="{% static 'images/logo.webp' %}" alt="Community Bike Works Logo" class="mx-auto md:mx-0 mb-4 w-14 h-14">
             <p class="text-lg font-semibold mb-2">Community Bike Works</p>
@@ -134,7 +129,6 @@
             </div>
           </div>
       
-          <!-- Programs Section -->
           <div>
             <h3 class="text-lg font-semibold mb-2">Programs</h3>
             <ul class="space-y-2 text-gray-300">
@@ -144,7 +138,6 @@
             </ul>
           </div>
       
-          <!-- Contact Section -->
           <div>
             <h3 class="text-lg font-semibold mb-2">Contact</h3>
             <ul class="space-y-2 text-gray-300">
@@ -154,7 +147,6 @@
             </ul>
           </div>
       
-          <!-- Locations Section -->
           <div>
             <h3 class="text-lg font-semibold mb-2">Locations</h3>
             <ul class="space-y-2 text-gray-300">
