@@ -1,7 +1,6 @@
 from django.http import Http404, HttpResponse
 from django.shortcuts import render
 
-# Create your views here.
 def index(request):
     return HttpResponse( "Hello, world. You're at the polls index.")
     
@@ -26,7 +25,6 @@ def shop(request, shopname):
         'easton': 'main/shops/easton.html',
     }
 
-    # Get the template for the given shopname, or raise a 404 if not found
     template = shop_templates.get(shopname)
     if template is None:
         raise Http404("Shop not found")
