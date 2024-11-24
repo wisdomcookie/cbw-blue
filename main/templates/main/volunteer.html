@@ -1,0 +1,79 @@
+<!-- main/volunteer.html -->
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Volunteer{% endblock %}
+
+{% block content %}
+
+<div class="w-full mb-8">
+    <img src="{% static 'images/hiring_header.png' %}" alt="Team photo" class="w-full h-auto object-cover">
+</div>
+
+<div class="flex items-center justify-center mb-4">
+    <img src="{% static 'icons/bike.png' %}" alt="Bike photo" class="w-12 h-12 mr-4">
+    <h2 class="text-3xl text-blue-dark font-bold text-center">Mentoring at Community Bike Works</h2>
+    <img src="{% static 'icons/bike.png' %}" alt="Bike photo" class="w-12 h-12 ml-4">
+</div>
+
+<p class="text-center text-blue-dark max-w-5xl mx-auto">
+    is a fun and meaningful way to engage with the young people of our community. Each year, 100 volunteers spend thousands of hours with students. 
+
+
+
+It's people like you who make bike mentoring a success. Whether you want spend time with students, support our events, or host a bike drive, we are excited to hear from you! 
+</p>
+
+
+{% comment %} <div class="flex items-center justify-center pt-20 pb-5">
+    <img src="{% static 'icons/bike.png' %}" alt="Bike icon" class="w-12 h-12 mr-4">
+    <h1 class="text-4xl font-bold text-center text-blue-dark">Mentor A Student</h1>
+    <img src="{% static 'icons/bike.png' %}" alt="Bike icon" class="w-12 h-12 ml-4">
+</div> {% endcomment %}
+
+
+<div class="pt-10 grid gap-20 md:grid-cols-3 px-20 max-w-6xl mx-auto items-stretch">
+
+    <div class="flex flex-col text-white text-center">
+        <div class="bg-orange p-6 rounded shadow flex-1">
+            <h3 class="text-2xl font-bold mb-4">Earn a Bike Instructor/Mentor</h3>
+            <p class="mb-6">Help students discover the joy of bike mechanics and riding. ​No mechanical experience necessary! We especially need women instructors for our mixed-gender or Girls' Earn a Bike classes.
+
+                4 pm - 6 pm one weeknight.</p>
+        </div>
+        {% comment %} <a href="{% url 'programs' %}">
+            <button class="bg-yellow-500 text-black font-semibold px-4 py-2 mt-6 w-2/4 rounded">Learn More</button>
+        </a> {% endcomment %}
+    </div>
+
+    <div class="flex flex-col text-white text-center">
+        <div class="bg-orange p-6 rounded shadow flex-1">
+            <h3 class="text-2xl font-bold mb-4">After-school Mentor</h3>
+            <p class="mb-6">Teach students something of interest to you, arrange a trip, join a bike ride, or simply engage with students. 
+
+                3 pm - 5:30 pm weekdays.</p>
+        </div>
+        {% comment %} <a href="{% url 'impact' %}">
+            <button class="bg-yellow-500 text-black font-semibold px-4 py-2 mt-6 w-2/4 rounded">Learn More</button>
+        </a> {% endcomment %}
+    </div>
+
+    <div class="flex flex-col text-white text-center">
+        <div class="bg-orange p-6 rounded shadow flex-1">
+            <h3 class="text-2xl font-bold mb-4">Additional Support</h3>
+            <p class="mb-6">Drive students to cycling competitions, or help with shopping, snack preparation, or printing and copying. Flexible.  </p>
+        </div>
+        {% comment %} <a href="{% url 'impact' %}">
+            <button class="bg-yellow-500 text-black font-semibold px-4 py-2 mt-6 w-2/4 rounded">Learn More</button>
+        </a> {% endcomment %}
+    </div>
+</div>
+
+
+<div class="text-center mt-10 max-w-5xl mx-auto mb-10">
+    <h3 class="text-blue-dark text-2xl font-bold mb-4">Ready to get started?</h3>
+    <p class="">Call James Williams at <span class="text-blue-dark">610.434.1140</span> or email <span class="text-blue-dark">james@communitybikeworks.org</span> to schedule a volunteer session or otherwise get involved. All volunteers must complete a background check before working with students.  </p>
+</div>
+
+
+{% endblock %}

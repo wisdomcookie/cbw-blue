@@ -6,12 +6,10 @@
 
 {% block content %}
 
-<!-- Header Image Section -->
 <div class="w-full mb-8">
     <img src="{% static 'images/hiring_header.png' %}" alt="Team photo" class="w-full h-auto object-cover">
 </div>
 
-<!-- Join Our Team Section -->
 <div class="flex items-center justify-center mb-4">
     <img src="{% static 'icons/bike.png' %}" alt="Bike photo" class="w-12 h-12 mr-4">
     <h2 class="text-3xl text-blue-dark font-bold text-center">Join Our Team!</h2>
@@ -22,7 +20,6 @@
     Community Bike Works is looking for enthusiastic and dedicated individuals to join our team. If you are passionate about working with youth and making a difference in the community, we want to hear from you!
 </p>
 
-    <!-- Job Description -->
     <div class="bg-blue-dark text-white p-8 mt-10 mx-4 rounded-lg relative max-w-5xl mx-auto shadow-lg">
         <h3 class="text-2xl font-semibold text-center mb-4">Job Description:</h3>
         <ul class="list-disc space-y-2 pl-5">
@@ -36,7 +33,6 @@
         </ul>
     </div>
     
-    <!-- Qualifications Section -->
     <div class="bg-blue-light text-white p-8 mt-10 mx-4 rounded-lg relative max-w-5xl mx-auto shadow-lg">
         <h3 class="text-2xl font-semibold text-center mb-4">Qualifications:</h3>
         <ul class="list-disc space-y-2 pl-5">
@@ -49,7 +45,6 @@
         </ul>
     </div>
 
-    <!-- Hours & Salary Section -->
     <div class="bg-orange text-white p-8 mt-10 mx-4 rounded-lg relative max-w-5xl mx-auto shadow-lg">
         <h3 class="text-2xl font-semibold text-center mb-4">Hours & Salary:</h3>
         <ul class="list-disc space-y-2 pl-5">
@@ -59,13 +54,10 @@
         </ul>
     </div>
 
-
-<!-- Interested in Joining Section -->
 <div class="bg-blue-dark text-blue-dark p-8 mt-10 mx-auto max-w-5xl shadow-lg rounded-lg mb-10">
     <h2 class="text-3xl font-bold text-center text-white mb-4">Interested in Joining the Team?</h2>
     <p class="text-center text-white mb-6">Apply below and join us in making a difference!</p>
 
-    <!-- Application Form -->
     <div class="bg-white text-gray-900 p-6 rounded-lg shadow-lg max-w-lg mx-auto">
         <form action="#" method="post" class="space-y-4">
             {% csrf_token %}

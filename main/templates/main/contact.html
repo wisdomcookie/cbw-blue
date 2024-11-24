@@ -8,7 +8,6 @@
     <h1 class="text-5xl font-extrabold text-white">Contact Us</h1>
 </div>
 
-<!-- Image banner section -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 mx-4">
     <div class="flex flex-col items-center"> 
         <img src="{% static 'images/shops/easton.png' %}" alt="Banner 1" class="w-full h-64 object-cover">
@@ -32,7 +31,6 @@
 
 
 
-<!-- Participate in Programs Section -->
 <div class="bg-blue-dark text-white p-8 mt-10 mx-4 rounded-lg relative max-w-5xl mx-auto shadow-lg">
     <h2 class="text-3xl font-bold mb-4 text-center">Participate in Our Programs</h2>
     <img src="{% static 'icons/gear.png' %}" alt="Gear icon" class="absolute bottom-4 left-4 w-12 h-12 opacity-30">
@@ -49,7 +47,6 @@
     </ul>    
 </div>
 
-<!-- Get Involved Section -->
 <div class="bg-orange text-white p-8 mt-8 mx-4 rounded-lg relative max-w-5xl mx-auto shadow-lg">
     <h2 class="text-3xl font-bold mb-4 text-center">Get Involved</h2>
     <img src="{% static 'icons/gear.png' %}" alt="Gear icon" class="absolute bottom-4 left-4 w-12 h-12 opacity-30">
@@ -66,7 +63,6 @@
     </ul>
 </div>
 
-<!-- Donate a Bike Section -->
 <div class="bg-blue-light text-white p-8 mt-8 mx-4 rounded-lg relative max-w-5xl mx-auto shadow-lg relative">
     <h2 class="text-3xl font-bold mb-4 text-center">Donate a Bike</h2>
     <img src="{% static 'icons/gear.png' %}" alt="Gear icon" class="absolute bottom-4 left-4 w-12 h-12 opacity-30">
@@ -83,7 +79,6 @@
     </ul>
 </div>
 
-<!-- Contact form section -->
 <div class="bg-blue-dark text-white p-8 mt-12 mx-auto max-w-5xl rounded-lg shadow-lg mb-8">
     <h2 class="text-3xl font-bold mb-4 text-center">Need Something Else?</h2>
     <p class="text-center mb-6">
@@ -91,7 +86,6 @@
     </p>
         <img src="{% static 'icons/gear.png' %}" alt="Gear icon" class="absolute bottom-4 left-4 w-12 h-12 opacity-30">
     <div class="flex flex-col md:flex-row md:space-x-8">
-        <!-- Left side: contact info -->
         <div class="flex-1">
             <h3 class="text-2xl font-bold mb-4">Contact Information</h3>
             <p class="mb-6">If you have any questions or need assistance, please feel free to reach out to us:</p>
@@ -106,7 +100,6 @@
             </ul>
         </div>
 
-        <!-- Right side: Contact form -->
         <div class="flex-1 bg-white text-gray-900 p-6 rounded-lg shadow-lg">
             <form action="#" method="post" class="space-y-4">
                 {% csrf_token %}
