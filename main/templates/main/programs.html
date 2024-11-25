@@ -45,7 +45,6 @@
             <p class="text-gray-600">Find a program that interests you. The details and the list of programs can be found below.</p>
         </div>
       
-        <!-- Step 2 -->
         <div class="col-span-1"></div>
 
         <div class="col-span-3 flex justify-center">
@@ -69,12 +68,10 @@
             <p class="text-gray-600">Fill out the form with your information. Please fill out all the required fields.</p>
         </div>
       
-        <!-- Step 3 -->
         <div class="col-span-1"></div>
         
         <div class="col-span-3 flex justify-center">
           <div class="w-12 h-12 bg-blue-800 text-white flex items-center justify-center rounded-full">
-            <!-- Icon (replace with appropriate icon) -->
             <img src={% static "icons/checkmark.png" %} alt="Icon" class="w-8 h-8">
           </div>
         </div>
@@ -95,16 +92,36 @@
 
     </div>
 
-      
-    <div class="text-white text-center pt-20 w-4/5 mx-auto">
-        <div class="bg-orange p-6 rounded shadow">
-            <h3 class="text-2xl font-bold mb-4 text-blue-dark">Get started at Bike Works</h3>
-            <p class="mb-6">by joining Junior Earn a Bike (ages 7-8) or Earn a Bike (ages 9-18). Once involved, you'll have access to all of our programs until you graduate high school. Programs are offered at our downtown Allentown and East Allentown bike shops and in schools in Allentown and Bethlehem. All programs are free!</p>
-        </div>
-    </div>
-
-          
     
+
+    <div class="pt-20 grid gap-20 md:grid-cols-1 px-20">
+
+      <div class="text-white text-center">
+          <div class="bg-orange p-6 rounded shadow">
+              <h3 class="text-2xl font-bold mb-4">Get started at Bike Works</h3>
+              <p class="mb-6">by joining Junior Earn a Bike (ages 7-8) or Earn a Bike (ages 9-18). Once involved, you'll have access to all of our programs until you graduate high school. Programs are offered at our downtown Allentown and East Allentown bike shops and in schools in Allentown and Bethlehem. All programs are free!</p>
+              
+              <div class="flex justify-evenly mt-6">
+                  <a href="{% url 'shops' shopname='allentown-east' %}"
+                     class="bg-yellow-500 text-black font-semibold px-4 py-2 rounded text-center w-40 flex items-center justify-center">
+                     East Allentown
+                  </a>
+                  <a href="{% url 'shops' shopname='allentown-central' %}"
+                     class="bg-yellow-500 text-black font-semibold px-4 py-2 rounded text-center w-40 flex items-center justify-center">
+                     Downtown Allentown
+                  </a>
+                  <a href="{% url 'shops' shopname='easton' %}"
+                     class="bg-yellow-500 text-black font-semibold px-4 py-2 rounded text-center w-40 flex items-center justify-center">
+                     Easton
+                  </a>
+              </div>
+          </div>
+      </div>
+    </div>
+    
+      
+      
+      
     <div class="flex items-center justify-center pt-20 pb-5">
       <img src="{% static 'icons/bike.png' %}" alt="Bike icon" class="w-12 h-12 mr-4">
       <h1 class="text-4xl font-bold text-center text-blue-dark">Frequently Asked Questions</h1>
@@ -113,7 +130,7 @@
   
     <div class="w-1/2 mx-auto mt-8 space-y-4 pb-20">
         <div class="border-b border-gray-300">
-          <button onclick="toggleAnswer(1)" class="flex justify-between items-center w-full py-4 text-blue-800 font-semibold">
+          <button onclick="toggleAnswer(1)" class="flex justify-between items-center w-full py-4 text-blue-dark font-semibold">
             What is a program?
             <span class="text-orange">&#x25BC;</span> 
           </button>
@@ -123,17 +140,17 @@
         </div>
       
         <div class="border-b border-gray-300">
-          <button onclick="toggleAnswer(2)" class="flex justify-between items-center w-full py-4 text-blue-800 font-semibold">
+          <button onclick="toggleAnswer(2)" class="flex justify-between items-center w-full py-4 text-blue-dark font-semibold">
             How do you register for a program?
             <span class="text-orange">&#x25BC;</span> 
           </button>
           <div id="answer-2" class="hidden text-gray-600 pb-4">
-            You can register by filling out our registration forms or contacting the respective shop representatives.
+            You can register by filling out our registration forms on each location's page or contacting the respective location representatives.
           </div>
         </div>
       
         <div class="border-b border-gray-300">
-          <button onclick="toggleAnswer(3)" class="flex justify-between items-center w-full py-4 text-blue-800 font-semibold">
+          <button onclick="toggleAnswer(3)" class="flex justify-between items-center w-full py-4 text-blue-dark font-semibold">
             When can I keep my bike?
             <span class="text-orange">&#x25BC;</span> 
           </button>

@@ -168,3 +168,6 @@ def people(request):
 
 def hiring(request):
     return render(request, 'main/about/hiring.html')
+
+def volunteer(request):
+    return render(request, 'main/volunteer.html')

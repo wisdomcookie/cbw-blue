@@ -14,7 +14,16 @@
             background-color: #0E3194;
         }
         .bg-blue-light {
+            {% comment %} original palette {% endcomment %}
             background-color: #01A7C2;
+
+            {% comment %} cyan-600 {% endcomment %}
+            {% comment %} background-color: #0891b2;  {% endcomment %}
+
+            {% comment %} sky-500 {% endcomment %}
+            {% comment %} background-color: #0284c7;  {% endcomment %}
+
+
         }
         .bg-orange {
             background-color: #E16036;
@@ -55,7 +64,7 @@
          class="absolute inset-0 w-full h-24 object-cover opacity-50 z-20" 
          alt="Navbar Background"> {% endcomment %}
 
-    <nav class="bg-blue-dark text-white text-2xl py-4 z-10 overflow-visible fixed top-0 w-full">
+    <nav class="bg-blue-light text-white text-2xl py-4 z-10 overflow-visible fixed top-0 w-full">
         <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
             <div class="relative -mb-24">
                 <a href="{% url 'home' %}">
@@ -65,11 +74,11 @@
             <div class="flex items-center space-x-5">
                 <a href="{% url 'home' %}" class="mx-2 hover:text-gray-300">Home</a>
 
-                <a href="{% url 'programs' %}" class="mx-2 hover:text-gray-300">Programs</a>
+                {% comment %} <a href="{% url 'programs' %}" class="mx-2 hover:text-gray-300">Programs</a> {% endcomment %}
 
                 <div class="relative group">
                     <a href="" class="mx-2 hover:text-gray-300 flex items-center">
-                        Shops
+                        Locations
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
@@ -84,6 +93,19 @@
 
                 {% comment %} <a href="{% url "about" %}" class="mx-2 hover:text-gray-300">About</a> {% endcomment %}
 
+                <div class="relative group">
+                    <a href="" class="mx-2 hover:text-gray-300 flex items-center">
+                        Join Us
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </a>
+                    <div class="absolute left-0 hidden bg-blue-dark text-white text-lg rounded-md shadow-lg py-2 group-hover:block">
+                        <a href="{% url 'volunteer' %}" class="block px-4 py-2 hover:bg-cyan-500">Volunteer</a>
+                        <a href="{% url 'hiring' %}" class="block px-4 py-2 hover:bg-cyan-500">Careers</a>
+                    </div>
+                </div>
+
 
                 <div class="relative group">
                     <a href="" class="mx-2 hover:text-gray-300 flex items-center">
@@ -93,10 +115,12 @@
                         </svg>
                     </a>
                     <div class="absolute left-0 hidden bg-blue-dark text-white text-lg rounded-md shadow-lg py-2 group-hover:block">
+                        <a href="{% url 'programs' %}" class="block px-4 py-2 hover:bg-cyan-500">Programs</a>
                         <a href="{% url 'impact' %}" class="block px-4 py-2 hover:bg-cyan-500">Mission And Impact</a>
-                        <a href="{% url 'hiring' %}" class="block px-4 py-2 hover:bg-cyan-500">Hiring</a>
                     </div>
                 </div>
+
+                
 
                 <a href="{% url "contact" %}" class="mx-2 hover:text-gray-300">Contact</a>
                 <a href="https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E331406&id=1" target="_blank" class="mx-2 hover:text-gray-300">Donate</a>
@@ -117,12 +141,12 @@
 
     {% comment %} </div> {% endcomment %}
     
-    <div class="mx-auto mt-20 pt-10">
+    <div class="mx-auto mt-20 pt-12">
         {% block content %}{% endblock %}
     </div>
 
 
-    <footer class="bg-blue-dark text-white py-8">
+    <footer class="bg-blue-light text-white py-8">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
           
           <div>
@@ -130,7 +154,7 @@
             <p class="text-lg font-semibold mb-2">Community Bike Works</p>
             <div class="flex justify-center md:justify-start space-x-4">
               <a href="#" target="_blank"><img src="{% static 'icons/facebook.png' %}" alt="Facebook" class="w-6 h-6"></a>
-              <a href="#" target="_blank"><img src="{% static 'icons/twitter.png' %}" alt="Twitter" class="w-6 h-6"></a>
+              <a href="#" target="_blank"><img src="{% static 'icons/x.png' %}" alt="Twitter" class="w-6 h-6"></a>
               <a href="https://www.instagram.com/communitybikeworks/" target="_blank"><img src="{% static 'icons/instagram.png' %}" alt="Instagram" class="w-6 h-6"></a>
               <a href="#" target="_blank"><img src="{% static 'icons/linkedin.png' %}" alt="LinkedIn" class="w-6 h-6"></a>
             </div>
